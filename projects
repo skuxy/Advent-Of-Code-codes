@@ -1,0 +1,35 @@
+[file_prefs]
+final_new_line=true
+ensure_convert_new_lines=false
+strip_trailing_spaces=true
+replace_tabs=false
+
+[indentation]
+indent_width=2
+indent_type=1
+indent_hard_tab_width=8
+detect_indent=false
+detect_indent_width=false
+indent_mode=2
+
+[project]
+name=AOC
+base_path=/home/skux/Documents/AOC/
+description=Collection of codes for Advent Of Code competition\n\nStarted on December 8th (a bit late)
+file_patterns=
+
+[long line marker]
+long_line_behaviour=1
+long_line_column=72
+
+[files]
+current_page=4
+FILE_NAME_0=745;Python;0;EUTF-8;1;1;0;%2Fhome%2Fskux%2FDocuments%2FAOC%2Fd1t1.py;0;4
+FILE_NAME_1=7000;None;0;EUTF-8;1;1;0;%2Fhome%2Fskux%2FDocuments%2FAOC%2Ft1_input.txt;0;2
+FILE_NAME_2=976;Python;0;EUTF-8;1;1;0;%2Fhome%2Fskux%2FDocuments%2FAOC%2Fd2t1.py;0;2
+FILE_NAME_3=7915;None;0;EUTF-8;1;1;0;%2Fhome%2Fskux%2FDocuments%2FAOC%2Ft2_input.txt;0;2
+FILE_NAME_4=877;Python;0;EUTF-8;1;1;0;%2Fhome%2Fskux%2FDocuments%2FAOC%2Fd3t1.py;0;2
+FILE_NAME_5=8192;None;0;EUTF-8;1;1;0;%2Fhome%2Fskux%2FDocuments%2FAOC%2Ft3_input.txt;0;2
+
+[VTE]
+last_dir=/home/skux/Documents/AOC
