@@ -1,5 +1,7 @@
 import re, sys
 
+#I apologize in advance for apsolutely abysmal casts in my script
+
 #get area
 def get_area(l,w,h):
 	return 2*l*w + 2*w*h + 2*h*l
@@ -25,8 +27,7 @@ def get_ribbon_len(lwh):
 def main():
 	result_area = 0
 	ribbon_len = 0
-	File = open(sys.argv[1]).readlines()
-	for line in File:
+	for line in open(sys.argv[1]).readlines():
 		result_area = result_area + get_wrapping_area(get_dimensions(line))
 		ribbon_len = ribbon_len + get_ribbon_len(get_dimensions(line))
 	print result_area
