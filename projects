@@ -23,13 +23,15 @@ long_line_behaviour=1
 long_line_column=72
 
 [files]
-current_page=4
+current_page=7
 FILE_NAME_0=745;Python;0;EUTF-8;1;1;0;%2Fhome%2Fskux%2FDocuments%2FAOC%2Fd1t1.py;0;4
 FILE_NAME_1=7000;None;0;EUTF-8;1;1;0;%2Fhome%2Fskux%2FDocuments%2FAOC%2Ft1_input.txt;0;2
 FILE_NAME_2=976;Python;0;EUTF-8;1;1;0;%2Fhome%2Fskux%2FDocuments%2FAOC%2Fd2t1.py;0;2
 FILE_NAME_3=7915;None;0;EUTF-8;1;1;0;%2Fhome%2Fskux%2FDocuments%2FAOC%2Ft2_input.txt;0;2
 FILE_NAME_4=877;Python;0;EUTF-8;1;1;0;%2Fhome%2Fskux%2FDocuments%2FAOC%2Fd3t1.py;0;2
 FILE_NAME_5=8192;None;0;EUTF-8;1;1;0;%2Fhome%2Fskux%2FDocuments%2FAOC%2Ft3_input.txt;0;2
+FILE_NAME_6=0;C++;0;EUTF-8;1;1;0;%2Fhome%2Fskux%2FDocuments%2FARH2%2FLab2%2Fmain_gcc.cpp;0;2
+FILE_NAME_7=0;C++;0;EUTF-8;1;1;0;%2Fhome%2Fskux%2FDocuments%2FARH2%2FLab2%2Fmain_msvc.cpp;0;2
 
 [VTE]
 last_dir=/home/skux/Documents/AOC
