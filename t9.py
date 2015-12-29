@@ -1,5 +1,7 @@
-import sys, re
+import sys
+import re
 from itertools import permutations
+
 
 #last try was brutally unsuccessfull, let's try again
 
@@ -26,9 +28,9 @@ longest = 0
 	#python <3
 for items in permutations(nodes):
 	distance = sum(map(lambda x, y: paths[x][y], items[:-1], items[1:]))
-	print distance
-	shortest = min(shortest, distance)
-	longest = max(longest, distance)
+    #print distance
+shortest = min(shortest, distance)
+longest = max(longest, distance)
 
 print "Shortest: " + str(shortest)
 
