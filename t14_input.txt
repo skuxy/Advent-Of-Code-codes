@@ -9,3 +9,4 @@ Vixen can fly 20 km/s for 4 seconds, but then must rest for 75 seconds.
 Dancer can fly 7 km/s for 20 seconds, but then must rest for 119 seconds.
 Test can fly 14 km/s for 10 seconds, but then must rest for 127 seconds.
 Test2 can fly 16 km/s for 11 seconds, but then must rest for 162 seconds.
+Test3 can fly 1 km/s for 1 seconds, but then must rest for 1 seconds.

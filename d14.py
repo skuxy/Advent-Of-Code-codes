@@ -15,10 +15,10 @@ class Reindeer:
         self.speed = speed
         self.timeMoving = timeMoving  #const
         self.timeResting = timeResting  #const
-        self.Moved = 0
-        self.Rested = 0
-        self.Moving = True
-        self.TotalMoved = 0  #in seconds
+        self.moved = 0
+        self.rested = 0
+        self.moving = True
+        self.totalMoved = 0  #in seconds
 
 
 #returns reindeer object
@@ -28,29 +28,30 @@ def parseInput(line):
 
 
 def printResults(reindeer):
-    print "Reindeer " + reindeer.name + " traveled " + str(reindeer.TotalMoved * reindeer.speed)
+    print "Reindeer " + reindeer.name + " traveled " + str(reindeer.totalMoved * reindeer.speed)
 
 
 def main():
     reindeers = list(map(parseInput, open(sys.argv[1]).readlines()))
 
-    for sec in range(1):  #2503 seconds, tested with 1000 for given task and it's OK
+    for sec in range(2503):  #2503 seconds, tested with 1000 for given task and it's OK. DISCLAIMER: NO IT IS NOT
         for reindeer in reindeers:
-            if reindeer.Moving:
-                if reindeer.Moved == reindeer.timeMoving:
-                    reindeer.Moving = False
-                    reindeer.Moved = 0
-                    reindeer.Rested = 0
+            if reindeer.moving:
+                if reindeer.moved >= reindeer.timeMoving:
+                    reindeer.moving = False
+                    reindeer.moved = 0
+                    reindeer.rested = 1
                 else:
-                    reindeer.Moved = reindeer.Moved + 1
-                    reindeer.TotalMoved = reindeer.TotalMoved + 1
+                    reindeer.moved = reindeer.moved + 1
+                    reindeer.totalMoved = reindeer.totalMoved + 1
             else:
-                if reindeer.Rested == reindeer.timeResting:
-                    reindeer.Moving = True
-                    reindeer.Moved = 0
-                    reindeer.Rested = 0
+                if reindeer.rested >= reindeer.timeResting:
+                    reindeer.moving = True
+                    reindeer.moved = 1
+                    reindeer.totalMoved = reindeer.totalMoved + 1
+                    reindeer.rested = 0
                 else:
-                    reindeer.Rested = reindeer.Rested + 1
+                    reindeer.rested = reindeer.rested + 1
 
     map(printResults, reindeers)
 
