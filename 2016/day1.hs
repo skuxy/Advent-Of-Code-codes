@@ -1,7 +1,6 @@
 --Haskell solution
+--part 1
 import System.IO
-
-let directions = "NESW"
 
 parseDirection :: String -> (Int, Int, Char) -> (Int, Int, Char)
 parseDirection (n:xs) (x,y,'N') 
@@ -24,7 +23,13 @@ parseList :: (Int,Int,Char) -> [String] -> (Int,Int,Char)
 parseList point [] = point
 parseList point (x:xs) = parseList (parseDirection x point)  xs
 
---main = do
---	handle <- openFile "day1.in" ReadMode
---	contents <- hGetContents handle
---	let parsedInput = map (filter (/=','))  (words $ init contents)
+getManhattan (x,y,_) = (abs x) + (abs y)
+
+--part 2
+main = do
+	handle <- openFile "day1.in" ReadMode
+	contents <- hGetContents handle
+	let parsedInput = map (filter (/=','))  (words $ init contents)
+        let finalPoint = parseList (0,0,'N') parsedInput
+	print $ getManhattan finalPoint
+
