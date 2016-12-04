@@ -17,12 +17,23 @@ incX (a,b) = (a,b+1)
 decY (a,b) = (a-1,b)
 decX (a,b) = (a,b-1)
 
-length' keypad index = sum ( map (\x -> if (x !! index) == '-' then 0 else 1) keypad)
+nOfDashesX keypad'' index = length $ filter (=='-') (keypad'' !! index)
+nOfDashesY keypad'' index = length $ filter (=='-') (map (\x -> x !! index) keypad'')
+nOfStuffX keypad'' index = length $ filter (/='-') (keypad'' !! index)
+nOfStuffY keypad'' index = length $ filter (/='-') (map (\x -> x !! index) keypad'')
 
-moveKey 'U' (a,b) keypad'' = if a `elem` [1..length keypad''-1] then decY (a,b) else (a,b)
-moveKey 'D' (a,b) keypad'' = if a `elem` [0..length keypad''-2] then incY (a,b) else (a,b)
-moveKey 'R' (a,b) keypad'' = if b `elem` [0..length (keypad'' !! a )- 2] then incX (a,b) else (a,b)
-moveKey 'L' (a,b) keypad'' = if b `elem` [1..length (keypad'' !! a )- 1] then decX (a,b) else (a,b)
+moveKey 'U' (a,b) keypad'' = if a `elem` (tail $ init [begin..begin+end]) then decY (a,b) else (a,b)
+	where begin = (nOfDashesY keypad'' b) `div` 2
+	      end = nOfStuffY keypad'' b
+moveKey 'D' (a,b) keypad'' = if a `elem` (init $ init [begin..begin+end]) then incY (a,b) else (a,b)
+	where begin = (nOfDashesY keypad'' b) `div` 2
+	      end = nOfStuffY keypad'' b
+moveKey 'R' (a,b) keypad'' = if b `elem` (init $ init [begin..begin+end]) then incX (a,b) else (a,b)
+	where begin = (nOfDashesX keypad'' a) `div` 2
+	      end = nOfStuffX keypad'' a
+moveKey 'L' (a,b) keypad'' = if b `elem` (tail $ init [begin..begin+end]) then decX (a,b) else (a,b)
+	where begin = (nOfDashesX keypad'' a) `div` 2
+	      end = nOfStuffX keypad'' a
 
 parseLine [] point _  = point
 parseLine (x:xs) point keypad'' = parseLine xs (moveKey x point keypad'') keypad''
@@ -31,4 +42,6 @@ main = do
 	content <- readFile "day2.in" 
 	let linesOfFile = lines content
 	let keys = map elemKeypad (map (\x -> parseLine x (1,1) keypad) linesOfFile)
+	let keys2 = map elemKeypad' (map (\x -> parseLine x (2,0) keypad') linesOfFile)
 	print keys
+	print keys2
