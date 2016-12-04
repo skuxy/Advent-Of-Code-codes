@@ -25,11 +25,26 @@ parseList point (x:xs) = parseList (parseDirection x point)  xs
 
 getManhattan (x,y,_) = (abs x) + (abs y)
 
---part 2
+--part2
+
+getAllPointsVisited (n:xs) (x,y,'N') 
+    | n == 'R' = [(x + i :: Int , y) | i <- [0..read xs :: Int] ]
+    | n == 'L' = [(x - i :: Int , y) | i <- [0..read xs :: Int] ]
+getAllPointsVisited (n:xs) (x,y,'E') 
+    | n == 'R' = [(x, y - i :: Int) | i <- [0..read xs :: Int] ]
+    | n == 'L' = [(x, y + i :: Int) | i <- [0..read xs :: Int] ]
+getAllPointsVisited (n:xs) (x,y,'S') 
+    | n == 'R' = [(x - i :: Int , y) | i <- [0..read xs :: Int] ]
+    | n == 'L' = [(x + i :: Int , y) | i <- [0..read xs :: Int] ]
+getAllPointsVisited (n:xs) (x,y,'W') 
+    | n == 'R' = [(x, y + i :: Int) | i <- [0..read xs :: Int] ]
+    | n == 'L' = [(x, y - i :: Int) | i <- [0..read xs :: Int] ]
+
 main = do
 	handle <- openFile "day1.in" ReadMode
 	contents <- hGetContents handle
 	let parsedInput = map (filter (/=','))  (words $ init contents)
         let finalPoint = parseList (0,0,'N') parsedInput
 	print $ getManhattan finalPoint
+
 
