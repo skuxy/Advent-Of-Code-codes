@@ -24,6 +24,6 @@ parseLines (x:xs) counts = parseLines xs (countElems counts x 0)
 getIndex n  = filter (\x -> snd x == n) 
 
 getMaxIndexes [] maxes _ = maxes
-getMaxIndexes elems maxes n = getMaxIndexes (filter (\x -> snd x /= n) elems) (maxes : end $ sortBy)
+getMaxIndexes elems maxes n = getMaxIndexes (filter (\x -> snd x /= n) elems) (maxes : head $ sort $ map (\(a,b,c) ->c) $ filter (\x -> snd x == n) elems)
 
 
