@@ -16,6 +16,9 @@ frequencyOfLetters letts = map (\x -> (length x, head x)) (group  $sort (filter 
 
 take2 = map snd
 
+shiftLetter 'z' = 'a'
+shiftLetter l = next l
+
 checkCode line = first == second
 	where first = take 5 $ take2 $ sortBy compareTuples (frequencyOfLetters $ getWords line)
 	      second = init $ splitOn "[" (getCheck line) !! 1
