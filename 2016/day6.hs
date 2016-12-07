@@ -28,11 +28,22 @@ compareTriples (a,b,c) (d,e,f) =
     case compare f c of
         ne -> ne
 
+compareTriples' :: (Ord a, Ord b, Ord c) => (a,b,c) -> (a,b,c) -> Ordering
+compareTriples' (a,b,c) (d,e,f) =
+    case compare c f of
+        ne -> ne
+
 getMaxIndexes [] maxes _ = maxes
 getMaxIndexes elems maxes n = getMaxIndexes filterOld (maxes ++ [findMax]) (n+1)
     where filterOld = filter (\(a,b,c) -> b > n) elems 
           findMax =  head $ sortBy compareTriples (filter (\(a,b,c) -> b == n) elems)
 
+getMinIndexes [] mins _ = mins
+getMinIndexes elems mins n = getMinIndexes filterOld (mins ++ [findMin]) (n+1)
+    where filterOld = filter (\(a,b,c) -> b > n) elems 
+          findMin =  head $ sortBy compareTriples' (filter (\(a,b,c) -> b == n) elems)
 main = do
         content <- readFile "day6.in"
         print $ map (\(a,_,_) -> a) $ getMaxIndexes (parseLines ( lines content ) []) [] 0 
+        print $ map (\(a,_,_) -> a) $ getMinIndexes (parseLines ( lines content ) []) [] 0 
+	
