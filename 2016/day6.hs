@@ -23,7 +23,16 @@ parseLines (x:xs) counts = parseLines xs (countElems counts x 0)
 
 getIndex n  = filter (\x -> snd x == n) 
 
+compareTriples :: (Ord a, Ord b, Ord c) => (a,b,c) -> (a,b,c) -> Ordering
+compareTriples (a,b,c) (d,e,f) =
+    case compare f c of
+        ne -> ne
+
 getMaxIndexes [] maxes _ = maxes
-getMaxIndexes elems maxes n = getMaxIndexes (filter (\x -> snd x /= n) elems) (maxes : head $ sort $ map (\(a,b,c) ->c) $ filter (\x -> snd x == n) elems)
+getMaxIndexes elems maxes n = getMaxIndexes filterOld (maxes ++ [findMax]) (n+1)
+    where filterOld = filter (\(a,b,c) -> b > n) elems 
+          findMax =  head $ sortBy compareTriples (filter (\(a,b,c) -> b == n) elems)
 
-
+main = do
+        content <- readFile "day6.in"
+        print $ map (\(a,_,_) -> a) $ getMaxIndexes (parseLines ( lines content ) []) [] 0 
