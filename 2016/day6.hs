@@ -1,6 +1,5 @@
 import Data.List
 
-
 type Triple  = (Char, Int, Int)--Character on index for n times
 
 elemOccurs :: [Triple] -> (Char, Int) -> Bool
