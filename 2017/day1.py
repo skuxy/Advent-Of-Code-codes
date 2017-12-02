@@ -1,11 +1,9 @@
 #! /usr/bin/env python3
 
-import fileinput
-
 RESULTING_SUM_FIRST = 0
 RESULTING_SUM_SECOND = 0
 
-for line in fileinput.input():
+for line in open('/dev/stdin').readlines():
     line_length = len(line) - 1
     for index in range(line_length):
         if line[index] == line[(index + 1) % (line_length)]:
