@@ -3,6 +3,8 @@
 
 class knot_hash:
     def __init__(self, lenghts_sequence):
+        lenghts_sequence = list(map(ord, lenghts_sequence))
+        lenghts_sequence += [17, 31, 73, 47, 23]
         self.circular_list = list(range(256))
         self.lenghts_sequence = lenghts_sequence
         self.current_index = 0
@@ -59,8 +61,6 @@ def split_list(list_of_numbers, number_of_pieces=16):
 if __name__ == "__main__":
     with open('/dev/stdin') as stdout:
         lenghts_sequence = stdout.read().strip()
-        lenghts_sequence = list(map(ord, lenghts_sequence))
-        lenghts_sequence += [17, 31, 73, 47, 23]
 
     knot = knot_hash(lenghts_sequence)
     for _ in range(64):
