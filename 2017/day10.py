@@ -28,6 +28,18 @@ class knot_hash:
         self.current_index %= 256
         self.skip += 1
 
+    def calculate_knot_hash(self):
+        for _ in range(64):
+            for length in self.lenghts_sequence:
+                self.reverse_slice(length)
+
+        splitted_list = split_list(self.circular_list)
+        xored_lists = [xor_over_list(elem) for elem in splitted_list]
+
+        hex_string = ''.join(["%02x" % x for x in xored_lists])
+
+        return hex_string
+
 
 def xor_over_list(list_of_numbers):
     xor_result = 0
