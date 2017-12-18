@@ -37,10 +37,12 @@ if __name__ == "__main__":
     sp = spinlock()
 
     #  First part
-    #  while sp.current_step < BUFFER_LEN:
-    #      sp.step()
-    #
+    while sp.current_step < BUFFER_LEN:
+        sp.step()
+    print(sp.buffer[sp.buffer.index(2017) + 1])
+
     # Second part
+    sp = spinlock()
     while sp.current_step < 50000000:
         sp.step_without_buffer()
 
