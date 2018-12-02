@@ -8,6 +8,7 @@
 #include <iostream>
 #include <fstream>
 #include <map>
+#include <list>
 
 #include "day2.cpp"
 
@@ -17,5 +18,7 @@
 uint32_t calculate_checksum(std::ifstream &input_file);
 
 std::pair<uint8_t, uint8_t> analyze_line(std::string line);
+
+std::string get_common_letters(std::vector<std::string> list_of_ids);
 
 void operator+=(std::pair<uint8_t, uint8_t> &p1, std::pair<uint8_t, uint8_t> p2);
