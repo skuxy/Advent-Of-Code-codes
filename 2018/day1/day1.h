@@ -5,5 +5,7 @@
 #ifndef DAY1_DAY1_H
 #define DAY1_DAY1_H
 
-#define INPUT_FILE "./input.txt"
+#include <iostream>
+#include <fstream>
+#include <set>
 #endif //DAY1_DAY1_H
