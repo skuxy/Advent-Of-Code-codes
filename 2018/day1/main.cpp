@@ -1,5 +1,6 @@
 #include <iostream>
 #include <fstream>
+#include "day1.cpp"
 
 #define INPUT_FILE "input.txt"
 
