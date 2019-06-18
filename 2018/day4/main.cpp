@@ -6,7 +6,6 @@
 
 #define INPUT_FILE "input.txt"
 
-
 void first_and_second_task()
 {
     int first_result{0};
@@ -14,7 +13,7 @@ void first_and_second_task()
 
     if (input_file.is_open())
     {
-        first_result = get_overlapping(input_file);
+        first_result = get_id_x_minute(input_file);
     } else
     {
         std::cerr << "No input file, idiot!";
@@ -24,6 +23,7 @@ void first_and_second_task()
 
     std::cout << first_result << std::endl;
 }
+
 
 int main(int argc, char **argv)
 {
