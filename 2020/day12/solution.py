@@ -3,9 +3,9 @@ import sys
 class Ferry:
     def _change_direction(self, coord, value):
         if coord == "x":
-            self.x += value
+            self.w_x += value
         else:
-            self.y += value
+            self.w_y += value
 
     def _rotate_right(self, amount):
         # self.bearing = (self.bearing + (amount / 90)) % 4
@@ -15,32 +15,8 @@ class Ferry:
         temp_wx = self.w_x
         temp_wy = self.w_y
 
-        # translate waypoint
-        temp_wx -= self.x
-        temp_wy -= self.y
-
         for _ in range(repeat):
-            _x = temp_wx
-            _y = temp_wy
-
-            if temp_wx >= 0 and temp_wy >= 0:
-                temp_wx = _x
-                temp_wy = - _y
-
-            elif temp_wx >= 0 and temp_wy < 0:
-                temp_wx = - _x
-                temp_wy = _y
-
-            elif temp_wx < 0 and temp_wy < 0:
-                temp_wx = _x
-                temp_wy = - _y
-
-            elif temp_wx < 0 and temp_wy >= 0:
-                temp_wx = - _x
-                temp_wy = _y
-
-        temp_wx += self.x
-        temp_wy += self.y
+            temp_wx, temp_wy = temp_wy, -temp_wx
 
         self.w_x = temp_wx
         self.w_y = temp_wy
@@ -53,32 +29,9 @@ class Ferry:
         temp_wx = self.w_x
         temp_wy = self.w_y
 
-        # translate waypoint
-        temp_wx -= self.x
-        temp_wy -= self.y
-
         for _ in range(repeat):
-            _x = temp_wx
-            _y = temp_wy
+            temp_wx, temp_wy = -temp_wy, temp_wx
 
-            if temp_wx >= 0 and temp_wy >= 0:
-                temp_wx = - _x
-                temp_wy = _y
-
-            elif temp_wx >= 0 and temp_wy < 0:
-                temp_wx = _x
-                temp_wy = - _y
-
-            elif temp_wx < 0 and temp_wy < 0:
-                temp_wx = - _x
-                temp_wy = _y
-
-            elif temp_wx < 0 and temp_wy >= 0:
-                temp_wx = _x
-                temp_wy = - _y
-
-        temp_wx += self.x
-        temp_wy += self.y
 
         self.w_x = temp_wx
         self.w_y = temp_wy
@@ -86,10 +39,8 @@ class Ferry:
     def _forward(self, amount):
         # direction = self.bearing_map[self.bearing]
         # self.actions[direction](amount)
-        self.x = self.w_x * amount
-        self.y = self.w_y * amount
-        self.w_x = self.w_x * amount
-        self.w_y = self.w_y * amount
+        self.x += self.w_x * amount
+        self.y += self.w_y * amount
 
     def __init__(self):
         self.w_x = 10
@@ -134,7 +85,6 @@ if __name__ == "__main__":
     ferry = Ferry()
 
     for line in input_data:
-        import pdb; pdb.set_trace()
         action = line[0]
         amount = int(line[1:])
 
