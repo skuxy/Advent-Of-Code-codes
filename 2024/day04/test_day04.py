@@ -1,0 +1,16 @@
+from unittest import TestCase
+
+
+example_string = '''MMMSXXMASM
+MSAMXMSMSA
+AMXSXMAAMM
+MSAMASMSMX
+XMASAMXAMM
+XXAMMXXAMA
+SMSMSASXSS
+SAXAMASAAA
+MAMMMXMMMM
+MXMXAXMASX
+'''
+
+class Test(TestCase):
