@@ -4,18 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1bdb3ab5-eaa2-44c6-a597-637a50d8c0c7" name="Changes" comment="2025, day 1">
-      <change afterPath="$PROJECT_DIR$/2015/day08/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/2015/day08/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/2015/day08/tests/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/2015/day08/tests/test_main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/2025/day02/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/2025/day02/day02.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/2025/day02/input.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/2025/day02/tests/test.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/2025/day02/tests/test_day02.py" afterDir="false" />
+    <list default="true" id="1bdb3ab5-eaa2-44c6-a597-637a50d8c0c7" name="Changes" comment="2025, day 2">
+      <change afterPath="$PROJECT_DIR$/2025/day03/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2025/day03/day03.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2025/day03/tests/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2025/day03/tests/test.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2025/day03/tests/test_day03.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2025/day01/tests/test01.txt" beforeDir="false" afterPath="$PROJECT_DIR$/2025/day01/tests/test01.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2015/day08/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/2015/day08/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,6 +59,7 @@
     "Python tests.Python tests for test_day02.TestLineState.test_run_dampened.executor": "Debug",
     "Python tests.Python tests for test_day02.TestPassword.executor": "Run",
     "Python tests.Python tests for test_day02.TestPassword.test_ranges.executor": "Run",
+    "Python tests.Python tests for test_day03.Test.executor": "Run",
     "Python tests.Python tests for test_day03.TestConditional.executor": "Run",
     "Python tests.Python tests for test_day03.TestFilter.executor": "Run",
     "Python tests.Python tests for test_day03.TestFilter.test_multiply_results.executor": "Run",
@@ -93,11 +90,12 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/2025/day03/tests" />
       <recent name="$PROJECT_DIR$/2015/day08/tests" />
       <recent name="$PROJECT_DIR$/2025/day01/tests" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.day02">
+  <component name="RunManager" selected="Python.day03">
     <configuration name="day02" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="AOC" />
       <option name="ENV_FILES" value="" />
@@ -121,7 +119,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="day03" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="AOC" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -130,12 +128,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/2015/day08" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/2025/day03" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/2015/day08/main.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/2025/day03/day03.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -176,7 +174,7 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for test_day02.TestPassword" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for test_day03.Test" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="AOC" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -188,23 +186,7 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_day02.TestPassword&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Python tests for test_day02.TestPassword.test_ranges" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
-      <module name="AOC" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_day02.TestPassword.test_ranges&quot;" />
+      <option name="_new_target" value="&quot;test_day03.Test&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
@@ -224,13 +206,29 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
+    <configuration name="Python tests in test_day03.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="AOC" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/2025/day03/tests/test_day03.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.day03" />
+        <item itemvalue="Python tests.Python tests in test_day03.py" />
+        <item itemvalue="Python tests.Python tests for test_day03.Test" />
         <item itemvalue="Python.day02" />
         <item itemvalue="Python tests.Python tests in test_day02.py" />
-        <item itemvalue="Python tests.Python tests for test_day02.TestPassword.test_ranges" />
-        <item itemvalue="Python tests.Python tests for test_day02.TestPassword" />
-        <item itemvalue="Python.main" />
       </list>
     </recent_temporary>
   </component>
@@ -256,7 +254,7 @@
       <workItem from="1733257428456" duration="2072000" />
       <workItem from="1733300644012" duration="1175000" />
       <workItem from="1764585895780" duration="887000" />
-      <workItem from="1764587153534" duration="7537000" />
+      <workItem from="1764587153534" duration="11889000" />
     </task>
     <task id="LOCAL-00001" summary="2024, Day 01&#10;&#10;Will I finish this year?">
       <option name="closed" value="true" />
@@ -290,7 +288,15 @@
       <option name="project" value="LOCAL" />
       <updated>1764593186101</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="2025, day 2">
+      <option name="closed" value="true" />
+      <created>1764696291869</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1764696291869</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -301,7 +307,8 @@
     <MESSAGE value="2024, Day 02. Mostly" />
     <MESSAGE value="2024, Day 03" />
     <MESSAGE value="2025, day 1" />
-    <option name="LAST_COMMIT_MESSAGE" value="2025, day 1" />
+    <MESSAGE value="2025, day 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="2025, day 2" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -322,8 +329,8 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/AOC$teeeeest.coverage" NAME="teeeeest Coverage Results" MODIFIED="1733255086745" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/2024/day03" />
     <SUITE FILE_PATH="coverage/AOC$day02.coverage" NAME="day02 Coverage Results" MODIFIED="1764696263453" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/2025/day02" />
-    <SUITE FILE_PATH="coverage/AOC$.coverage" NAME=" Coverage Results" MODIFIED="1764695583202" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/AOC$day03.coverage" NAME="day03 Coverage Results" MODIFIED="1733255352994" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/2024/day03" />
+    <SUITE FILE_PATH="coverage/AOC$.coverage" NAME=" Coverage Results" MODIFIED="1764777179384" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/AOC$day03.coverage" NAME="day03 Coverage Results" MODIFIED="1764783828574" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/2025/day03" />
     <SUITE FILE_PATH="coverage/AOC$day01.coverage" NAME="day01 Coverage Results" MODIFIED="1764593135517" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/2025/day01" />
     <SUITE FILE_PATH="coverage/AOC$main.coverage" NAME="main Coverage Results" MODIFIED="1764605955215" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/2015/day08" />
   </component>
