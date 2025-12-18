@@ -93,7 +93,7 @@ class TestSolveSecond:
         assert result == expected
 
     def test_solve_second_no_matches(self):
-        """Test solve_second with no matching numbers"""
+        """Test solve_second with no matching numbers - still returns all ranges merged"""
         input_str = '''3-5
 10-14
 
@@ -102,7 +102,9 @@ class TestSolveSecond:
 20
 '''
         result = solve_second(input_str)
-        assert result == set()
+        # Even with no matches, solve_second merges ALL ranges
+        expected = set(range(3, 6)) | set(range(10, 15))
+        assert result == expected
 
     def test_solve_second_single_range(self):
         """Test solve_second with a single range"""
