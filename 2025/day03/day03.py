@@ -26,7 +26,7 @@ def find_joltage(lines, needed_bats):
     for bank in lines:
         need_to_remove = len(bank) - needed_bats
         while need_to_remove > 0:
-            for i in range(len(bank) - 1):
+            for i in range(len(bank) - 1): 
                 if bank[i] < bank[i+1]:
                     bank = bank[:i] + bank[i+1:]
                     break
